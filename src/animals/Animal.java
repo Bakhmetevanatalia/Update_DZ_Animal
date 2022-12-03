@@ -1,6 +1,6 @@
 package animals;
 
-public class Animal {
+public abstract class Animal {
     private String name, color;
     private Integer age, weight;
     
@@ -61,13 +61,13 @@ public class Animal {
 
     @Override
     public String toString() {
-        String s = null;
-        if (age == 1) s = String.format("Привет! меня зовут %s, мне %d год, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
-        else if (age < 5 ) s = String.format("Привет! меня зовут %s, мне %d года, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
-        else if (age <= 20) s = String.format("Привет! меня зовут %s, мне %d лет, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
-        else if (age > 20 && age%10==1) s = String.format("Привет! меня зовут %s, мне %d год, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
-        else if (age > 20 && (1<age%10 && age%10<5)) s = String.format("Привет! меня зовут %s, мне %d года, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
-        else s = String.format("Привет! меня зовут %s, мне %d лет, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
-        return s;
+        String inform = null;
+        if (age == 1) inform = String.format("Привет! меня зовут %s, мне %d год, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
+        else if (age < 5 ) inform = String.format("Привет! меня зовут %s, мне %d года, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
+        else if (age <= 20) inform = String.format("Привет! меня зовут %s, мне %d лет, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
+        else if (age > 20 && age%10==1) inform = String.format("Привет! меня зовут %s, мне %d год, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
+        else if (age > 20 && (1<age%10 && age%10<5)) inform = String.format("Привет! меня зовут %s, мне %d года, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
+        else inform = String.format("Привет! меня зовут %s, мне %d лет, я вешу - %d кг, мой цвет - %s", name, age, weight, color);
+        return inform;
     }
 }
